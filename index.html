@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Escape Room Puzzle</title>
+
+</head>
+
+<body>
+    <div class="game-container">
+    <div id="puzzle1">
+        <p>You are trapped in a prison cell, handcuffed to the bed by a <strong>four-digit padlock</strong>. To your left, you see a grimey mirror, and on the wall to your right the word 'LOSE' etched in vertical and horizontal lines.</p>
+        <img src="puzzle1.jpg" alt="LOSE">
+        <input type="text" id="answer1" placeholder="What's the code?">
+        <button onclick="checkAnswer('answer1', '3201', 'puzzle2')">Submit</button>
+    </div>
+
+    <div id="puzzle2" class="hidden">
+        <p>You remove the handcuffs and walk to the cell door. A three-digit code this time! Peering through the bars, you spot a brochure on the guard's desk: "We've got a number of items inside! Weights, Smartphones, Artworks, and much more!"</p>
+        <img src="puzzle2.jpg" alt="Weights, Smartphones, Artworks">
+        <input type="text" id="answer2" placeholder="What's the code?">
+        <button onclick="checkAnswer('answer2', '812', 'puzzle3')">Submit</button>
+    </div>
+
+    <div id="puzzle3" class="hidden">
+        <p>You slip out of your cell and make your way to the Fire Exit, skilfully evading the guards. You are confronted by a final <strong>three-digit passcode</strong> and a poster that says "Initial Guard Rota: Oliver Neil Edwards, Simon Isaac Xavier, Thomas William Olson"</p>
+        <img src="puzzle3.jpg" alt="Oliver Neil Edwards, Simon Isaac Xavier, Thomas William Olson">
+        <input type="text" id="answer3" placeholder="What's the code?">
+        <button onclick="checkAnswer('answer3', '162', 'game-complete')">Submit</button>
+    </div>
+
+    <div id="game-complete" class="hidden">
+        <p>Congratulations! You have earned your freedom!</p>
+    </div>
+    </div>
+</body>
+<script src="javascript.js"></script>
+</html>
